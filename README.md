@@ -5,6 +5,6 @@ enrolled at Sky High.
 
 ## How to use
 
-`shell
+`
 ruby directory.rb
 `
