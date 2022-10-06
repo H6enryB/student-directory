@@ -17,3 +17,6 @@ puts "Zach Braun"
 puts "Penny Lent"
 puts "Lash"
 puts "Speed"
+print "Overall, we have "
+print 10
+puts " great students!"
