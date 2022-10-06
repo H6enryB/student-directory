@@ -1,4 +1,3 @@
-puts "The Members of Sky High"
 #First are the teachers and the all important transport officer for the school!
 faculty = [
     "Principal Powers",
@@ -8,12 +7,9 @@ faculty = [
     "Ron Wilson, Bus Driver",
     "Nurse Spex"
 ]
-puts "--Faculty--"
-faculty.each do |employee_list|
-    puts employee_list
-end
+
 #Next come the students or, should I say, the new generation of heroes that Sky High will produce.
-student = [
+students = [
     "Will Stronghold",
     "Layla Willaims",
     "Gwen Grayson",
@@ -25,9 +21,33 @@ student = [
     "Lash",
     "Speed"
 ]
-puts "--Students--"
-student.each do |register|
-    puts register
+#Some definition is needed to ensure we are as efficient as possible!
+def print_title
+    puts "The People of Sky High"
 end
-#Lastly, we must take a register of our students!
-print "Overall, we have #{student.count} great students and #{faculty.count} fantastic faculty members!"
+
+def print_header_1
+    puts "--The Faculty--"
+end
+
+def print_header_2
+    puts "--The Students--"
+end
+
+def print(names)
+    names.each do |name|
+        puts name
+    end
+end
+
+def print_footer(names, named)
+    puts "Overall, we have #{names.count} great students and #{named.count} fantastic faculty members!"
+end
+
+#Lets take a look at our school of heroes!
+print_title
+print_header_1
+print(faculty)
+print_header_2
+print(students)
+print_footer(students, faculty)
