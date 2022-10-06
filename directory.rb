@@ -1,25 +1,33 @@
-student_count = 10
-
 puts "The Members of Sky High"
 #First are the teachers and the all important transport officer for the school!
-puts "--Faculty--"                      
-puts "Principal Powers"
-puts "Coach Boomer"
-puts "Professor Medulla"
-puts "All-American Boy"
-puts "Ron Wilson, Bus Driver"
-puts "Nurse Spex"
+faculty = [
+    "Principal Powers",
+    "Coach Boomer",
+    "Professor Medulla",
+    "All-American Boy",
+    "Ron Wilson, Bus Driver",
+    "Nurse Spex"
+]
+puts "--Faculty--"
+faculty.each do |employee_list|
+    puts employee_list
+end
 #Next come the students or, should I say, the new generation of heroes that Sky High will produce.
+student = [
+    "Will Stronghold",
+    "Layla Willaims",
+    "Gwen Grayson",
+    "Warren Peace",
+    "Ethan Bank",
+    "Magenta Lewis",
+    "Zach Brown",
+    "Penny Lent",
+    "Lash",
+    "Speed"
+]
 puts "--Students--"
-puts "Will Stronghold"                  
-puts "Layla Williams"
-puts "Gwen Grayson"
-puts "Warren Peace"
-puts "Ethan Bank"
-puts "Magenta Lewis"
-puts "Zach Braun"
-puts "Penny Lent"
-puts "Lash"
-puts "Speed"
+student.each do |register|
+    puts register
+end
 #Lastly, we must take a register of our students!
-print "Overall, we have #{student_count} great students"
+print "Overall, we have #{student.count} great students and #{faculty.count} fantastic faculty members!"
