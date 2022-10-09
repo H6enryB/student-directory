@@ -1,3 +1,18 @@
+@students = []
+
+#Perhaps an interactice menu for new heroes to sign up to?
+def print_menu
+    puts "1. Input the students"
+    puts "2. Show the students"
+    puts "9. Exit"
+end
+
+def show_students
+    print_header
+    print(students)
+    print_footer(faculty)
+end
+
 #First are the teachers and the all important transport officer for the school!
 faculty = [
     "Principal Powers",
@@ -8,36 +23,13 @@ faculty = [
     "Nurse Spex"
 ]
 
-#Next come the students or, should I say, the new generation of heroes that Sky High will produce.
-def input_students
-    puts "Please enter the names of the students"
-    puts "To finish, just hit return twice"
-    
-    students = []
-    
-    name = gets.chomp
-    
-    while !name.empty? do
-        
-        students << {name: name, cohort: :november}
-        puts "Now we have #{students.count} students"
-        
-        name = gets.chomp
-    end
-    
-    students
-end
 #Some definition is needed to ensure we are as efficient as possible!
 def print_title
     puts "The People of Sky High"
 end
 
-def print_header_1
+def print_header
     puts "--The Faculty--"
-end
-
-def print_header_2
-    puts "--The Students--"
 end
 
 def print(names)
@@ -51,10 +43,7 @@ def print_footer(names)
 end
 
 #Lets take a look at our school of heroes!
-students = input_students
 print_title
-print_header_1
+print_header
 print(faculty)
-print_header_2
-print(students)
 print_footer(faculty)
